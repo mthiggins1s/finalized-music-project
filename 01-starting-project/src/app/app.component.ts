@@ -23,4 +23,14 @@ export class AppComponent {
   onSelectSong(song: Song) {
     this.selectedSong.set(song);
   }
+
+  onDeleteSong(id: string) {
+    this.songs.set(this.songs().filter(song => song.id !== id));
+  
+    // Reset player if song is the one being deleted
+    if (this.selectedSong()?.id === id) {
+      this.selectedSong.set(null);
+    }
+  }
+  
 }

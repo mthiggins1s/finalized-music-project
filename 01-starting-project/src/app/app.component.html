@@ -1,6 +1,7 @@
 <app-header />
 
 <main>
+  <!-- Left: List of songs -->
   <ul id="songs">
     @for (song of songs(); track song.id) {
       <li>
@@ -9,8 +10,12 @@
     }
   </ul>
 
+  <!-- Right: Playlist box for selected song only -->
   @if (selectedSong()) {
-    <app-playlist [song]="selectedSong()!" />
+    <app-playlist
+      [song]="selectedSong()!"
+      (delete)="onDeleteSong($event)"
+    />
   } @else {
     <p id="fallback">Select a song to listen to it!</p>
   }
