@@ -1,0 +1,17 @@
+<app-header />
+
+<main>
+  <ul id="songs">
+    @for (song of songs(); track song.id) {
+      <li>
+        <app-songs [song]="song" (select)="onSelectSong(song)" />
+      </li>
+    }
+  </ul>
+
+  @if (selectedSong()) {
+    <app-playlist [song]="selectedSong()!" />
+  } @else {
+    <p id="fallback">Select a song to listen to it!</p>
+  }
+</main>

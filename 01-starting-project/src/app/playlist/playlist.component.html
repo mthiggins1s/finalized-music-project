@@ -1,0 +1,11 @@
+<section id="playlist">
+  <header>
+    <h2>{{ song.title }}</h2>
+  </header>
+
+  <div class="song-card">
+    <p>{{ song.title }} — {{ song.artist }}</p>
+    <button (click)="playSong(song.audioUrl)"><span>▶️</span> Play</button>
+    <button (click)="stopSong()"><span>⏹️</span> Stop</button>
+  </div>
+</section>

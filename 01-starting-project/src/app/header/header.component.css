@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&family=Winky+Sans:ital,wght@0,300;1,300&display=swap');
+
+.retro-header {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 3px solid #ff0037;
+  box-shadow: 0 0 10px #00ccff;
+
+  width: 90%; 
+  max-width: 1500px;
+  margin: 2rem auto;
+  border-radius: 10px;
+}
+

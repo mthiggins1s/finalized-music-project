@@ -1,0 +1,42 @@
+export const songs_list = [
+  {
+    id: 'n1',
+    title: 'Rather Do',
+    artist: 'Yxngxr1',
+    cover: 'assets/covers/song1.jpg',
+    audioUrl: 'assets/audio/song1.mp3',
+    album: 'Childhood Dreams',
+    genre: 'Alternate/Indie',
+    year: '2019',
+  },
+  {
+    id: 'n2',
+    title: 'Beanie',
+    artist: 'Chezile',
+    cover: 'assets/covers/song2.jpg',
+    audioUrl: 'assets/audio/song2.mp3',
+    album: 'Single / Beanie',
+    genre: 'Alternate/Indie',
+    year: '2023',
+  },
+  {
+    id: 'n3',
+    title: 'Dark Red',
+    artist: 'Steve Lacy',
+    cover: 'assets/covers/song3.jpg',
+    audioUrl: 'assets/audio/song3.mp3',
+    album: 'Single / Dark Red',
+    genre: 'Alternate/Indie',
+    year: '2017',
+  },
+  {
+    id: 'n4',
+    title: 'Call Me What You Want',
+    artist: 'Mons Vi',
+    cover: 'assets/covers/song4.jpg',
+    audioUrl: 'assets/audio/song4.mp3',
+    album: 'hey.monsvi',
+    genre: 'Alternate/Indie',
+    year: '2023',
+  }
+];
