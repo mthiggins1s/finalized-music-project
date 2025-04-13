@@ -1,0 +1,48 @@
+.song-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: #1a1a1a;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 55, 0.4), 0 0 15px rgba(0, 100, 255, 0.3);
+  max-width: 500px;
+  margin: 1.5rem auto;
+}
+
+label {
+  font-size: 1rem;
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+input {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 0 6px rgba(255, 77, 77, 0.3);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ccff;
+}
+
+button {
+  background-color: #0f0f0f;
+  color: #00ccff;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #00ccff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #111;
+  box-shadow: 0 0 10px #00ccff;
+}

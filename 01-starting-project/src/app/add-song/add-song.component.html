@@ -1,0 +1,12 @@
+<form (ngSubmit)="onSubmit()" #form="ngForm" class="song-form">
+  <label for="title">Add a Song Title</label>
+  <input
+    type="text"
+    required
+    [(ngModel)]="title"
+    name="title"
+    id="title"
+    placeholder="Enter song title..."
+  />
+  <button type="submit">➕ Add Song</button>
+</form>

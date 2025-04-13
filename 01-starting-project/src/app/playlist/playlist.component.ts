@@ -17,7 +17,6 @@ export class PlaylistComponent {
 
   songs = songs_list;
   audio = new Audio();
-  selectedSong = signal<Song | null>(null);
 
   playSong(audioUrl: string) {
     this.audio.src = audioUrl;

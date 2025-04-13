@@ -1,22 +1,22 @@
 <app-header />
 
 <main>
+  <!-- Add Song Form -->
+  <app-add-song />
+
   <!-- Left: List of songs -->
   <ul id="songs">
     @for (song of songs(); track song.id) {
-      <li>
-        <app-songs [song]="song" (select)="onSelectSong(song)" />
-      </li>
+    <li>
+      <app-songs [song]="song" (select)="onSelectSong(song)" />
+    </li>
     }
   </ul>
 
   <!-- Right: Playlist box for selected song only -->
   @if (selectedSong()) {
-    <app-playlist
-      [song]="selectedSong()!"
-      (delete)="onDeleteSong($event)"
-    />
+  <app-playlist [song]="selectedSong()!" (delete)="onDeleteSong($event)" />
   } @else {
-    <p id="fallback">Select a song to listen to it!</p>
+  <p id="fallback">Select a song to listen to it!</p>
   }
 </main>
