@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { SongService } from '../song.service';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-add-song',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [SharedModule],
   templateUrl: './add-song.component.html',
   styleUrl: './add-song.component.css'
 })
