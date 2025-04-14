@@ -13,7 +13,7 @@ export class PlaylistComponent {
   @Input() title: string | undefined;
   @Input() song!: Song;
 
-  @Output() delete = new EventEmitter<string>(); // ✅ added
+  @Output() delete = new EventEmitter<string>();
 
   songs = songs_list;
   audio = new Audio();
@@ -30,7 +30,7 @@ export class PlaylistComponent {
   }
 
   deleteSong() {
-    this.stopSong(); // stop before removing
+    this.stopSong(); 
     this.delete.emit(this.song.id);
   }
 }
