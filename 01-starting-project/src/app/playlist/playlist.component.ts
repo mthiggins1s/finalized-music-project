@@ -30,7 +30,7 @@ export class PlaylistComponent {
   }
 
   deleteSong() {
-    this.stopSong(); // stop before removing
+    this.stopSong(); 
     this.delete.emit(this.song.id);
   }
 }
