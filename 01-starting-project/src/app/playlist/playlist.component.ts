@@ -13,7 +13,7 @@ export class PlaylistComponent {
   @Input() title: string | undefined;
   @Input() song!: Song;
 
-  @Output() delete = new EventEmitter<string>(); // ✅ added
+  @Output() delete = new EventEmitter<string>();
 
   songs = songs_list;
   audio = new Audio();
