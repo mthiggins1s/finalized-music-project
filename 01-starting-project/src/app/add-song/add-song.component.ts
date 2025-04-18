@@ -11,8 +11,16 @@ import { SharedModule } from '../shared/shared.module';
 })
 export class AddSongComponent {
   title: string = '';
+  selectedFile: File | null = null;
 
   constructor(private songService: SongService) {}
+
+  onFileSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      this.selectedFile = input.files[0];
+    }
+  }
 
   onSubmit() {
     if (!this.title.trim()) {
@@ -20,8 +28,35 @@ export class AddSongComponent {
       return;
     }
 
-    this.songService.addSongFromTitle(this.title);
-    this.title = '';
+    if (!this.selectedFile) {
+      alert('Please upload an MP3 file!');
+      return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      const audioUrl = reader.result as string;
+
+      const newSong = {
+        id: 'id' + Date.now(),
+        title: this.title.trim(),
+        artist: 'Custom Upload',
+        album: 'User Upload',
+        genre: 'Unknown',
+        year: '2025',
+        cover: 'assets/covers/default.jpg',
+        audioUrl: audioUrl
+      };
+
+      this.songService.addSong(newSong);
+      alert(`✅ "${newSong.title}" has been added!`);
+
+      // Reset form
+      this.title = '';
+      this.selectedFile = null;
+    };
+
+    reader.readAsDataURL(this.selectedFile); // Converts to base64
   }
 }
-

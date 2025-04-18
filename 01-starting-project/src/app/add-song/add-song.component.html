@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()" #form="ngForm" class="song-form">
+<form (ngSubmit)="onSubmit()" class="song-form">
   <label for="title">Add a Song Title</label>
   <input
     type="text"
@@ -8,5 +8,14 @@
     id="title"
     placeholder="Enter song title..."
   />
+
+  <label for="audioFile">Upload MP3 File</label>
+  <input
+    type="file"
+    accept=".mp3"
+    id="audioFile"
+    (change)="onFileSelected($event)"
+  />
+
   <button type="submit">➕ Add Song</button>
 </form>
