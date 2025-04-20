@@ -8,7 +8,7 @@ A simple CRUD app built with Angular 19 that lets users manage a playlist of son
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/music-playlist-angular.git
+   git clone https://github.com/your-username/finalized-music-project.git
    cd music-playlist-angular
 
 
