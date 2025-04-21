@@ -20,7 +20,15 @@ export class SongService {
 
   private loadSongs(): Song[] {
     const stored = localStorage.getItem(this.STORAGE_KEY);
-    return stored ? JSON.parse(stored) : songs_list;
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored);
+        return Array.isArray(parsed) && parsed.length > 0 ? parsed : songs_list;
+      } catch {
+        return songs_list;
+      }
+    }
+    return songs_list;
   }
 
   selectSong(song: Song | null) {
